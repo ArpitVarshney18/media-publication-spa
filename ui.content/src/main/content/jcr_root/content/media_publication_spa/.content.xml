@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/media_publication_spa/settings/wcm/templates(/.*)]"
+        jcr:primaryType="cq:PageContent"
+        cq:conf="/conf/media_publication_spa"
+        jcr:title="media-publication-spa"
+        sling:resourceType="media_publication_spa/components/app"
+        cq:redirectTarget="/content/media_publication_spa/en">
+    </jcr:content>
+    <en/>
+    <fr/>
+</jcr:root>
