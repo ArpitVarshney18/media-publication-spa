@@ -13,12 +13,12 @@
  ~ See the License for the specific language governing permissions and
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-import React, {Component} from 'react';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import React, { Component } from 'react';
+import { MapTo } from '@adobe/cq-react-editable-components';
 import DOMPurify from 'dompurify';
 import extractModelId from '../../utils/extract-model-id';
 
-require('./Text.css');
+require('./AssetGallery.css');
 
 /**
  * Default Edit configuration for the AssetGallery component
@@ -29,7 +29,7 @@ const AssetGalleryEditConfig = {
 
     emptyLabel: 'Asset Gallery',
 
-    isEmpty: function(props) {
+    isEmpty: function (props) {
         return !props || !props.title || props.title.trim().length < 1;
     }
 };
@@ -40,7 +40,26 @@ const AssetGalleryEditConfig = {
 class AssetGallery extends Component {
 
     render() {
-        return <div className="heading"> Asset Gallery </div>;
+        const items = this.props.assetDataList.map((item, key) =>
+
+            <div className="col-sm-4 cmp-asset-gallery__card-container">
+                <div className="cmp-image">
+                    <a href={item.detailPagePath}>
+                        <img className="cmp-image_image" src={item.thumnailPath} />
+                    </a>
+                    <br />
+                    <span className="cmp-image__file-name">{item.fileName}</span>
+                </div>
+            </div>
+        );
+        return <div id="cmp-asset-gallery" className="cmp-asset-gallery">
+            <h1 className="cmp-asset-gallery__title">{this.props.title}</h1>
+            <div className="container">
+                <div className="row">
+                    {items}
+                </div>
+            </div>
+        </div>;
     }
 }
 

@@ -27,6 +27,7 @@ import { render } from 'react-dom';
 import { Router } from 'react-router-dom';
 import App from './components/App';
 import './components/import-components';
+import 'bootstrap/dist/css/bootstrap.css';
 
 document.addEventListener('DOMContentLoaded', () => {
   ModelManager.initialize().then(pageModel => {
