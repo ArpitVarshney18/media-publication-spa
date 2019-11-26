@@ -56,8 +56,11 @@
                 <configuration>
                     <exportScr>true</exportScr>
                     <instructions>
+                       <!-- Import any version of javax.inject, to allow 
+                            running on multiple versions of AEM -->
+                        <Import-Package>javax.inject;version=0.0.0,*</Import-Package>
                         <!-- The Sling-Model-Packages instruction needs to point to the implementation package -->
-                        <Sling-Model-Packages>media-publication-spa.internal.models</Sling-Model-Packages>
+                        <Sling-Model-Packages>com.media.publication.spa.core</Sling-Model-Packages>
                         <!-- Enable processing of OSGI DS component annotations -->
                         <_dsannotations>*</_dsannotations>
                         <!-- Enable processing of OSGI metatype annotations -->
@@ -187,10 +190,6 @@
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>osgi.annotation</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.annotation</groupId>
-            <artifactId>javax.annotation-api</artifactId>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
