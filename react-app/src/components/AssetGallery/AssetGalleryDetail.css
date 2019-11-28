@@ -1,0 +1,23 @@
+#cmp-asset-gallery-detail .cmp-asset-gallery__image {
+    width: 100%;
+  }
+  #cmp-asset-gallery-detail .cmp-asset-gallery__title {
+    text-align: center;
+    margin: 0 12px 55px 6px;
+    color: #fff;
+    font-size: 1.9rem;
+    background: #5f259f;
+    height: 131px;
+    line-height: 113px;
+  }
+  #cmp-asset-gallery-detail .cmp-asset-gallery__back-button {
+    text-align: center;
+  }
+  #cmp-asset-gallery-detail .cmp-button {
+    color: #fff;
+  }
+  #cmp-asset-gallery-detail .cmp-asset-gallery-container {
+    padding: 58px 36px 101px 21px;
+    background-color: #fff;
+  }
+  
